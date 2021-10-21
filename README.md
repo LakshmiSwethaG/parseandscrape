@@ -1,5 +1,3 @@
-# Parsing Metacritic Test
-
 ```
 $ python api.py
 ```
