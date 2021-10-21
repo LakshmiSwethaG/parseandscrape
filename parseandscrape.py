@@ -9,12 +9,12 @@ def scrapeTopPS4Games(soup):
   # Find the elements of the a tag with class name title
   games = soup.find_all("a", class_="title")
   for each_game in games:
-    title = each_game.find("h3").text.encode('ascii').strip()
+    title = each_game.find("h3").get_text().strip()
     titles.append(title)
   # Find the elements of the div tag with given class name
   scores = soup.find_all("div", class_="clamp-score-wrap")
   for each_score in scores:
-    score = each_score.find("div", class_="metascore_w large game positive").text.encode('ascii')
+    score = each_score.find("div", class_="metascore_w large game positive").get_text().strip()
     metascores.append(score)
   gamesbymetascore = {key:value for key, value in zip(titles, metascores)}
   result = []
