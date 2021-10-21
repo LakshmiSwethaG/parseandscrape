@@ -1,0 +1,13 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h4>{% block title %} Top Playstation 4 Games {% endblock %}</h4>
+    {% for game in games %}
+        <spann>Title: </spann>
+        <a href="/games/{{ game['title'] }}">
+            <span>{{ game['title'] }}</span>
+        </a>
+        <span>Score:{{ game['score'] }}</span>
+        <hr>
+    {% endfor %}
+{% endblock %}

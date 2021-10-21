@@ -1,0 +1,4 @@
+include requirements.txt
+include ./py.typed
+include templates/*.html
+global-exclude *.pyc

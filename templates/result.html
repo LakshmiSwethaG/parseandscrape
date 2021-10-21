@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    <h1>{% block title %} {% endblock %}</h1>
+    {% if result %}
+        <span>{{ result }}</span>
+    {% else %}
+        <span>Not a valid title!</span>
+    {% endif %}
+{% endblock %}
